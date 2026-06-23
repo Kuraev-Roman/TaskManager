@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TaskManager.Core.Services.TaskService" BaseTypeListCollapsed="true">
+    <Position X="17.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AA4IAAAgAAQAAAAAAAAAAAQAAEEAAAAAAoAAAAAgEIA=</HashCode>
+      <FileName>Services\TaskService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TaskManager.Core.Services.TaskStatistics">
+    <Position X="13.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACIAAAABAAAAAAQAQAAAAAAAABAAAAA=</HashCode>
+      <FileName>Services\TaskStatistics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaskManager.Core.Models.TaskItem">
+    <Position X="15.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACCAAEABAgAGAEACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TaskItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="TaskManager.Core.Services.ITaskService">
+    <Position X="13.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYIAAAgAAQAAAAAAAAAAAQAAEEAAAAAAgAAAAAgEIA=</HashCode>
+      <FileName>Services\ITaskService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="TaskManager.Core.Models.TaskPriority">
+    <Position X="15.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Models\TaskPriority.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TaskManager.Core.Models.TaskStatus">
+    <Position X="17.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACIAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Models\TaskStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
