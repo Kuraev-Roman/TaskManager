@@ -15,9 +15,9 @@
                      Style="{StaticResource FormInput}"/>
             <TextBlock Text="Приоритет" Style="{StaticResource FormLabel}"/>
             <ComboBox x:Name="CmbPriority" Padding="6,4">
-                <ComboBoxItem Content="Низкий"  Tag="{x:Static models:TaskPriority.Low}"/>
-                <ComboBoxItem Content="Средний" Tag="{x:Static models:TaskPriority.Medium}"/>
-                <ComboBoxItem Content="Высокий" Tag="{x:Static models:TaskPriority.High}"/>
+                <ComboBoxItem Content="Низкий"  Tag="{x:Static models:Priority.Low}"/>
+                <ComboBoxItem Content="Средний" Tag="{x:Static models:Priority.Medium}"/>
+                <ComboBoxItem Content="Высокий" Tag="{x:Static models:Priority.High}"/>
             </ComboBox>
             <TextBlock Text="Срок выполнения" Style="{StaticResource FormLabel}"/>
             <DatePicker x:Name="DpDueDate"/>

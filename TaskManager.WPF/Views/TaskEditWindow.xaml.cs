@@ -25,7 +25,7 @@ namespace TaskManager.WPF.Views
             ChkImportant.IsChecked = _task.IsImportant;
 
             foreach (ComboBoxItem item in CmbPriority.Items)
-                if ((TaskPriority)item.Tag == _task.Priority)
+                if ((Priority)item.Tag == _task.Priority)
                 { CmbPriority.SelectedItem = item; break; }
             if (CmbPriority.SelectedItem is null) CmbPriority.SelectedIndex = 1;
 
@@ -51,7 +51,7 @@ namespace TaskManager.WPF.Views
                 CreatedAt = _task.CreatedAt,
                 Title = TxtTitle.Text.Trim(),
                 Description = TxtDescription.Text.Trim(),
-                Priority = (TaskPriority)((ComboBoxItem)CmbPriority.SelectedItem).Tag,
+                Priority = (Priority)((ComboBoxItem)CmbPriority.SelectedItem).Tag,
                 DueDate = DpDueDate.SelectedDate ?? DateTime.Today.AddDays(1),
                 Status = (TaskStatus)((ComboBoxItem)CmbStatus.SelectedItem).Tag,
                 IsImportant = ChkImportant.IsChecked == true

@@ -1,6 +1,6 @@
 ﻿namespace TaskManager.Core.Models
 {
-    public enum TaskPriority
+    public enum Priority
     {
         Low,
         Medium,

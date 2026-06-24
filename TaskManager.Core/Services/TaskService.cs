@@ -1,22 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using TaskManager.Core.Models;
 
 namespace TaskManager.Core.Services
 {
-    public class TaskService : ITaskService
+    public class TaskService
     {
         private List<TaskItem> _tasks = new();
-
-        private static readonly JsonSerializerOptions _jsonOptions = new()
-        {
-            WriteIndented = true,
-            Converters = { new JsonStringEnumConverter() }
-        };
 
         public void Add(TaskItem task)
         {
@@ -71,30 +62,5 @@ namespace TaskManager.Core.Services
             descending
                 ? _tasks.OrderByDescending(t => t.DueDate)
                 : _tasks.OrderBy(t => t.DueDate);
-
-        public TaskStatistics GetStatistics() => new()
-        {
-            Total = _tasks.Count,
-            New = _tasks.Count(t => t.Status == TaskStatus.New),
-            InProgress = _tasks.Count(t => t.Status == TaskStatus.InProgress),
-            Completed = _tasks.Count(t => t.Status == TaskStatus.Completed),
-            Overdue = _tasks.Count(t => t.IsOverdue),
-            Important = _tasks.Count(t => t.IsImportant)
-        };
-
-        public void SaveToFile(string filePath)
-        {
-            string json = JsonSerializer.Serialize(_tasks, _jsonOptions);
-            File.WriteAllText(filePath, json);
-        }
-
-        public void LoadFromFile(string filePath)
-        {
-            if (!File.Exists(filePath))
-                throw new FileNotFoundException("Файл не найден.", filePath);
-            string json = File.ReadAllText(filePath);
-            _tasks = JsonSerializer.Deserialize<List<TaskItem>>(json, _jsonOptions)
-                     ?? new List<TaskItem>();
-        }
     }
 }
